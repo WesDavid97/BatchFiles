@@ -17,7 +17,7 @@ echo.
 Rem Comando rmdir excluio link se ele já existir
 rmdir /s /q "%dirlink%"
 REm Comando %~dp0 força o link será criado no mesmo diretorio do MklinkLocal 
-mklink /D "%dirlink%" "%~dp0" 
+mklink /D "%~dp0" "dirlink" 
 
 pause 
 exit
