@@ -3,19 +3,20 @@
 color A
 
 REM mesnagem para o usuário
+echo *Executar como Administrador*
+echo.
 echo Link Simbolico:
 echo O comando mklink no Windows e usado para criar links simbolicos, 
 echo links fisicos ou juncoes entre arquivos e pastas. Esses links permitem 
 echo que voce acesse um arquivo ou pasta em outro local como se fosse o original.
 echo.
-echo Executar como Administrador:
 echo O Microsoft OneDrive pode impedir alteracoes pelo CMD em diretorios
 echo sincronizados, o link simbolico do arquivo pode ser criado na  Area
 echo de Trabalho e podera ser recortado para outro local. 
 echo.
 
 REM Pergunta ao usuário pelo caminho do diretório
-set /p dirLink=">> Digite o caminho onde o Link sera criado:
+set /p dirLink=">> Digite o caminho onde o Link sera criado: "
 set /p dirOrigem=">> Digite o caminho de origem a ser clonado: "
 echo.
 
