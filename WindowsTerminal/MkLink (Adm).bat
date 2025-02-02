@@ -4,18 +4,18 @@ color A
 
 echo *Executar como Administrador*
 echo.
-echo Link Símbolico:
+echo Link Simbolico:
 echo O comando mklink no Windows e usado para criar links simbolicos, 
 echo links fisicos ou juncoes entre arquivos e pastas. Symlink ou Link 
-echo Símbolico permite manter a sincronização entre dois diretórios.
+echo Simbolico permite manter a sincronizacao entre dois diretorios.
 echo.
-echo O comando MkLink solicita primeiro o caminho de destino onde o link/atalho será criado,
-echo em seguida, o caminho de origem onde está o diretório que o usuário deseja cria o link.
+echo O comando MkLink solicita primeiro o caminho de destino onde o link/atalho sera criado,
+echo em seguida, o caminho de origem onde esta o diretorio que o usuario deseja criar o link.
 echo.
 
 REM Pergunta ao usuário pelo caminho do diretório
 set /p dirLink=">> Caminho de destino do Link : "
-set /p dirOrigem=">> Caminho de origem do diretorio: "
+set /p dirOrigem="<< Caminho de origem do diretorio: "
 echo.
 
 REM Obtém o nome do diretório a ser clonado 
