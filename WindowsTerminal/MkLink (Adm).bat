@@ -22,7 +22,7 @@ REM Obtém o nome do diretório a ser clonado
 for %%f in ("%dirOrigem%") do set dirName=%%~nxf
 
 REM Cria o link simbólico na Área de Trabalho
-mklink /D "%dirLink%\%SymlinkMkLink%\%dirName%" "%dirOrigem%"
+mklink /D "%dirLink%\%dirName%" "%dirOrigem%"
 echo.
 
 pause
