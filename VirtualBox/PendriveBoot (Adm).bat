@@ -32,7 +32,7 @@ if errorlevel 2 (
     echo Criando VMDK apontando para PhysicalDrive%DISKNUM%...
     REM "cd" navega entre pastas ou diretórios o VboxManage é o comando para gerenciar o VirtualBox
     cd %programfiles%\Oracle\VirtualBox
-    VBoxManage internalcommands createrawvmdk -filename %FOLDERDISK%/VMBoxusb/usb.vmdk -rawdisk \\.\PhysicalDrive%DISKNUM%
+    VBoxManage internalcommands createrawvmdk -filename %FOLDERDISK%\VMBoxusb\usb.vmdk -rawdisk \\.\PhysicalDrive%DISKNUM%
 )
 
 pause
