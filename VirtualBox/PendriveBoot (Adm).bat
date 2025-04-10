@@ -4,7 +4,6 @@ Color A
 REM Lista todos os discos com DISKPART ===
 echo.
 echo Listando discos locais e removiveis disponiveis...
-echo.
 (
     echo list disk
 ) | diskpart
@@ -12,6 +11,7 @@ echo.
 pause /b
 
 REM Solicita o número do disco (pendrive) ===
+echo.
 choice /M ">> Criar disco virtual VMDK?"
 if errorlevel 2 (
     echo.
@@ -35,8 +35,6 @@ if errorlevel 2 (
     REM "cd" navega entre pastas ou diretórios o VboxManage é o comando para gerenciar o VirtualBox
     cd %programfiles%\Oracle\VirtualBox
     VBoxManage internalcommands createrawvmdk -filename %VMPATCH% -rawdisk \\.\PhysicalDrive%DISKNUM%
-
-    explorer /select , "%VMPATCH%"
 )
 
 pause
