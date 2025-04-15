@@ -38,6 +38,8 @@ if errorlevel 2 (
     REM "cd" navega entre pastas ou diretórios o VboxManage é o comando para gerenciar o VirtualBox
     cd %programfiles%\Oracle\VirtualBox
     VBoxManage internalcommands createrawvmdk -filename %VMPATCH% -rawdisk \\.\PhysicalDrive%DISKNUM%
+
+    explorer /select , "%VMPATCH%"
 )
 
 pause
