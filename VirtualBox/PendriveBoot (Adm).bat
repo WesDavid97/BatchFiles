@@ -20,8 +20,7 @@ if errorlevel 2 (
     pause
     exit
 ) else (
-    echo [*] O script cria um disco virtual (VMDK) para boot via usb para drivers
-    echo     removíveis bootavel.
+    echo [*] O script cria um disco virtual (VMDK) para boot via usb para drivers removíveis bootavel.
     echo [*] Cada VMDK criado é unico, vinculado para cada drive.
     echo [*] Certificar se o drive usb, pendrive, HD ou SSD esta conectado.
     echo [*] Erros podem estar relacinados a VMDK não criada para novos drivers.
