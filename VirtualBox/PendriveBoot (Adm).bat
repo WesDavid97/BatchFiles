@@ -1,4 +1,4 @@
-@echo off
+@echo off 
 Color A
 
 REM Lista todos os discos com DISKPART ===
