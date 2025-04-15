@@ -30,7 +30,7 @@ if errorlevel 2 (
     set /p FOLDERDISK=">>Salvar onde,caminho:"
     set VMPATCH=%FOLDERDISK%\VMBoxusb\usb.vmdk
 
-    REM Cria o repositório da pasta VMboxusb 
+    REM Cria o diretório para a pasta VMboxusb dentro do caminho especificado
     if not exist "%VMPATCH%"(
     mkdir VMPATCH
     )
