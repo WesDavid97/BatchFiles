@@ -27,8 +27,10 @@ if errorlevel 2 (
     echo.
 
     set /p DISKNUM=">> Digite o numero do disco do pendrive:" 
-    set /p FOLDERDISK=">>Salvar pasta,caminho:"
+    set /p FOLDERDISK=">>Salvar onde,caminho:"
     set VMPATCH=%FOLDERDISK%\VMBoxusb\usb.vmdk
+
+    REM Cria o repositório da pasta VMboxusb 
     if not exist "%VMPATCH%"(
     mkdir VMPATCH
     )
