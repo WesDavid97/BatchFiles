@@ -28,12 +28,13 @@ if errorlevel 2 (
 
     set /p DISKNUM=">> Digite o numero do disco do pendrive:" 
     set /p FOLDERDISK=">>Salvar pasta,caminho:"
-    set VMPATCH=%FOLDERDISK%\%VMBoxusb%\usb.vmdk
-    if not exist "%VMboxusb%"(
-    mkdir VMboxusb
+    set VMPATCH=%FOLDERDISK%\VMBoxusb\usb.vmdk
+    if not exist "%VMPATCH%"(
+    mkdir VMPATCH
     )
     
     echo Criando VMDK apontando para PhysicalDrive%DISKNUM%...
+
     REM "cd" navega entre pastas ou diretórios o VboxManage é o comando para gerenciar o VirtualBox
     cd %programfiles%\Oracle\VirtualBox
     VBoxManage internalcommands createrawvmdk -filename %VMPATCH% -rawdisk \\.\PhysicalDrive%DISKNUM%
