@@ -12,6 +12,7 @@ pause /b
 
 REM Solicita o número do disco (pendrive) ===
 echo.
+echo [*] Antes de iniciar o Virtual box precisa estar instalado.
 choice /M ">> Criar disco virtual VMDK?"
 if errorlevel 2 (
     echo.
@@ -19,12 +20,11 @@ if errorlevel 2 (
     pause
     exit
 ) else (
-    echo [] O script cria um disco virtual (VMDK) para boot via usb para drivers
-    echo    removíveis bootavel.
-    echo [] Cada VMDK criado é unico, vinculado para cada drive.
-    echo [] Antes de iniciar o Virtual box precisa estar instalado.
-    echo [] Certificar se o drive usb, pendrive, HD ou SSD esta conectado.
-    echo [] Erros podem estar relacinados a VMDK não criada para novos drivers.
+    echo [*] O script cria um disco virtual (VMDK) para boot via usb para drivers
+    echo     removíveis bootavel.
+    echo [*] Cada VMDK criado é unico, vinculado para cada drive.
+    echo [*] Certificar se o drive usb, pendrive, HD ou SSD esta conectado.
+    echo [*] Erros podem estar relacinados a VMDK não criada para novos drivers.
     echo.
 
     set /p DISKNUM=">> Digite o numero do disco do pendrive:" 
