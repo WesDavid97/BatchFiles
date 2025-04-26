@@ -20,6 +20,6 @@ cd "%programfiles%\Oracle\VirtualBox"
 ```
 .\VBoxManage.exe createmedium disk --filename C:\VirtualDiskUsb.vmdk --format=VMDK --variant RawDisk --property RawDrive=\\.\PhysicalDrive#
 ```
-* Substituía `C:` pelo caminho da pasta onde sera criado o `VirtualDiskUsb.vmdk`
+* Substituía `C:` pelo diretorio onde está instalado o VirtualBox, sera criado o arquivo `VirtualDiskUsb.vmdk`.
 * Substituía `#` pelo número do disco.
 
