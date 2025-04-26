@@ -7,8 +7,8 @@ echo ---------------------------------------------------------------------------
 echo [*] Leia-me [*]
 echo [] O Virtual box precisa estar instalado antes de continuar.
 echo [] Certificar se o drive removivel usb, pendrive, HD ou SSD esta conectado.
-echo [] Este script precisar ser executado como administrador no mesmo repositorio 
-echo    do VirtualBox, por padrao o disco C:
+echo [] Este script precisar ser executado como administrador no repositorio do VirtualBox,
+echo    o arquivo VMDK VirtualDiskUsb sera criado no mesmo diretorio do script.
 echo [] Cada VMDK criado se torna unico, vinculado para cada drive.
 echo [] Erros podem estar relacinados a VMDK nao criada para novos drivers.
 echo [] O script cria um disco virtual (VMDK) para boot via usb para drivers removiveis bootavel.
@@ -21,12 +21,14 @@ echo Abrindo o gerenciador de disco DISKPART...
 echo.
 echo.
 
-set /p DISKNUM=">> Digite o numero do disco do removivel:" 
-set VMPATH=%programfiles%\Oracle\VirtualBox\VirtualDiskUsb.vmdk
+set /p DISKNUM=">> Digite o numero do disco do removivel:"
+
+REM Obtém o diretório onde o script está localizado
+set SCRIPT_DIR=%~dp0
+set VMPATH=%SCRIPT_DIR%VirtualDiskUsb.vmdk
 echo Criando VMDK apontando para PhysicalDrive%DISKNUM%...
 
 REM Script para gerenciar o VirtualBox
-
 cd "%programfiles%\Oracle\VirtualBox"
 .\VBoxManage.exe createmedium disk --filename %VMPATH% --format=VMDK --variant RawDisk --property RawDrive=\\.\PhysicalDrive%DISKNUM%
 
