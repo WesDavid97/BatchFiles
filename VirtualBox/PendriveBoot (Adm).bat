@@ -29,7 +29,7 @@ echo Criando VMDK apontando para PhysicalDrive%DISKNUM%...
 REM Script para gerenciar o VirtualBox
 
 cd "%programfiles%\Oracle\VirtualBox"
-VBoxManage createmedium disk --filename %VMPATH% --format=VMDK --variant RawDisk --property RawDrive=\\.\PhysicalDrive%DISKNUM%
+.\VBoxManage.exe createmedium disk --filename %VMPATH% --format=VMDK --variant RawDisk --property RawDrive=\\.\PhysicalDrive%DISKNUM%
 
 echo [*] VMDK criado com sucesso!
 explorer /select , "%FOLDERDISK%"
