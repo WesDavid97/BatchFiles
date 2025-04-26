@@ -22,8 +22,7 @@ echo.
 echo.
 
 set /p DISKNUM=">> Digite o numero do disco do removivel:" 
-set /p FOLDERDISK=">> Local onde salvar VirtualDisk Usb:"
-set VMPATH=%FOLDERDISK%\VirtualDiskUsb.vmdk
+set VMPATH=%programfiles%\Oracle\VirtualBox\VirtualDiskUsb.vmdk
 echo Criando VMDK apontando para PhysicalDrive%DISKNUM%...
 
 REM Script para gerenciar o VirtualBox
@@ -32,6 +31,6 @@ cd "%programfiles%\Oracle\VirtualBox"
 .\VBoxManage.exe createmedium disk --filename %VMPATH% --format=VMDK --variant RawDisk --property RawDrive=\\.\PhysicalDrive%DISKNUM%
 
 echo [*] VMDK criado com sucesso!
-explorer /select , "%FOLDERDISK%"
+explorer /select , "%VMPATH%"
 pause
 exit
