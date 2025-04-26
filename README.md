@@ -12,15 +12,14 @@ Boot de sistemas pela iso em drivers conectados pela usb,
 **Criar usb.vmdk Manual:**  
 Utilizando o terminal para criar um disco virtual para acesso ao dispositivo conectado via usb pelo VirtualBox  
 * Prompt de Comando como administrador.
-* No terminal, abrir a pasta de instalação do VirtualBox com o comando:
+* No terminal, vá diretamente ao diretório onde o VirtualBox está instalado antes de executar o comando:
 ```
-cd %programfiles%\Oracle\VirtualBox
+cd "%programfiles%\Oracle\VirtualBox"
 ```
 * O arquivo VMDK será criado no local especificado no comando que vem em seguida:
 ```
-VBoxManage internalcommands createrawvmdk -filename C:\usb.vmdk -rawdisk \\.\PhysicalDrive#
+VBoxManage createmedium disk --filename C:\VirtualDiskUsb.vmdk --format=VMDK --variant RawDisk --property RawDrive=\\.\PhysicalDrive#
 ```
-* Substituía `C:` pelo caminho da pasta onde sera criado o `\usb.vmdk`
+* Substituía `C:` pelo caminho da pasta onde sera criado o `VirtualDiskUsb.vmdk`
 * Substituía `#` pelo número do disco.
 
- **Exemplo:** VBoxManage internalcommands createrawvmdk -filename D:\MeusArquivos\usb.vmdk -rawdisk \\.\PhysicalDrive3
