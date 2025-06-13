@@ -1,12 +1,13 @@
-### Terminal Windows CMD
+## Terminal Windows CMD
 
-## BatchFiles
+### BatchFiles
 [Scripts batch úteis no terminal](https://github.com/WesDavid97/BatchFiles-Windows/tree/main/Sistema)
 
-## Oracle VitualBox
+### Oracle VitualBox
 [VitualBox Boot pela usb](https://github.com/WesDavid97/BatchFiles/issues/1)
 
-## Winget 
-A ferramenta winget do terminal do windows, possibilita exportar e importar uma lista de aplicativos instalados, possibilitando o backup dos programas. 
+### Winget 
+[Comando winget](https://github.com/WesDavid97/BatchFiles/tree/main/Winget)
 
+Possibilita exportar e importar uma lista de aplicativos instalados para backup. 
 As instalações e atualizações iram acessar os repositórios dos aplicativos na internet através do terminal, Windows CMD ou PowerShell.
